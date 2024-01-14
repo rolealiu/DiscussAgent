@@ -1,0 +1,42 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    /* 确保整个页面填满整个屏幕高度 */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.config-panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    flex: 1;
+    /* 配置板块占1份 */
+    overflow: auto;
+}
+
+.dialogue-panel,
+.summary-panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    flex: 2;
+    /* 对话板块和总结板块各占2份 */
+    overflow: auto;
+}
+
+#dialogue,
+#summary {
+    height: calc(100vh - 20px);
+    /* 视口高度减去边框和填充 */
+    overflow-y: auto;
+}
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}

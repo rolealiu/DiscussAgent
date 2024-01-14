@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI对话模拟器</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="config-panel">
+            <div>
+                <h3>话题</h3>
+                <textarea id="topic" placeholder="输入话题">孩子必须要提早工作</textarea> <!-- 将话题输入框变为多行文本框 -->
+            </div>
+            <div>
+                <h3>对话轮次</h3>
+                <input type="number" id="rounds" placeholder="对话轮次" min="1" value="3"> <!-- 设置最小值为1 -->
+            </div>
+            <div>
+                <h3>Role A Prompt</h3>
+                <textarea id="promptA" placeholder="Role A的prompt">
+                你总是和我持有不同的观点，我们希望通过讨论得到真理。
+                你的回复总是简单有趣，并且会用许多生活中的例子来证明观点。</textarea>
+            </div>
+            <div>
+                <h3>Role B Prompt</h3>
+                <textarea id="promptB" placeholder="Role B的prompt">你总是和我持有不同的观点，我们希望通过讨论得到真理。
+                你的回复永远尖酸刻薄，并且会无理取闹不讲道理。</textarea>
+            </div>
+            <button id="start">开始对话</button>
+            <button id="stop">结束对话</button>
+        </div>
+        <div class="dialogue-panel">
+            <div class="dialogue" id="dialogue"></div>
+        </div>
+        <div class="summary-panel">
+            <div class="summary" id="summary"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
